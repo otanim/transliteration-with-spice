@@ -1,6 +1,6 @@
 {
   "name": "translit-hy2ascii",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Node library for turning strings with armenian characters into ascii compliant text.",
   "homepage": "https://github.com/otanim/translit-hy2ascii ",
   "author": "Arman Yeghiazaryan <otanim617@gmail.com> (http://otanim.com)",
