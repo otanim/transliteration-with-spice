@@ -8,7 +8,7 @@ This is a transliteration tool.
 ## Install
 
 ```sh
-$ npm install --save translit-to-ascii
+$ npm install translit-to-ascii --save
 ```
 
 
