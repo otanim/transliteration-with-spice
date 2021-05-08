@@ -54,7 +54,6 @@ describe('samples', () => {
         const textOrigin = 'բարեւ';
         const textResult = 'barev';
         const translits = translitserate(textOrigin);
-        console.log(translits.join(', '));
         if (translits[0] !== textResult) {
             return done(new Error(`Mismatched result: ${textResult} !== ${translits[0]}`));
         }
@@ -65,7 +64,6 @@ describe('samples', () => {
         const textOrigin = 'привет';
         const textResult = 'privet';
         const translits = translitserate(textOrigin);
-        console.log(translits.join(', '));
         if (translits[0] !== textResult) {
             return done(new Error(`Mismatched result: ${textResult} !== ${translits[0]}`));
         }
@@ -77,7 +75,6 @@ describe('samples', () => {
         const textOrigin = 'բարե՛ւ աշխարհ';
         const textResult = 'barev ashkharh';
         const translits = translitserate(textOrigin);
-        console.log(translits.join(', '));
         if (translits[0] !== textResult) {
             return done(new Error(`Mismatched result: ${textResult} !== ${translits[0]}`));
         }
@@ -88,7 +85,6 @@ describe('samples', () => {
         const textOrigin = 'привет мир!';
         const textResult = 'privet mir!';
         const translits = translitserate(textOrigin);
-        console.log(translits.join(', '));
         if (translits[0] !== textResult) {
             return done(new Error(`Mismatched result: ${textResult} !== ${translits[0]}`));
         }
