@@ -1,6 +1,6 @@
 {
   "name": "translit-to-ascii",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Node library for turning strings with armenian/russian characters into ascii compliant text.",
   "homepage": "https://github.com/otanim/translit-to-ascii",
   "author": "Arman Yeghiazaryan <otanim617@gmail.com> (http://otanim.com)",
@@ -9,9 +9,6 @@
     "url": "git+https://github.com/otanim/translit-to-ascii.git"
   },
   "license": "GPL-3.0",
-  "files": [
-    "index.js"
-  ],
   "keywords": [
     "translit-hy",
     "translit-ru",
