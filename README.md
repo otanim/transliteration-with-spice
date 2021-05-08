@@ -1,24 +1,27 @@
-> Armenian transliteration library.
+This is a transliteration tool.
+
+## Supported languages
+- Armenian
+- Russian
 
 
 ## Install
 
 ```sh
-$ npm install --save translit-hy2ascii
+$ npm install --save translit-to-ascii
 ```
 
 
 ## Usage
 
-```js
-var translit = require('translit-hy2ascii');
+```javascript
+const translitarate = require('translit-to-ascii');
 
-translit.toASCII("Բարեւ աշխարհ");
-// Barev ashkharh
+const translitsHY = translitarate("բարե՛ւ աշխարհ");
+console.log(translits.join(', '));
+// barev ashkharh, barev askharh, barev ashxarh, barev asxarh
 
+const translitsRU = translitarate("привет мир!");
+console.log(translits.join(', '));
+// privet mir!, privyot mir!, privot mir!
 ```
-
-
-## License
-
-MIT © [Otanim](http://otanim.com)

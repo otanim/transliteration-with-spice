@@ -1,12 +1,12 @@
 {
-  "name": "translit-hy2ascii",
-  "version": "0.0.6",
-  "description": "Node library for turning strings with armenian characters into ascii compliant text.",
-  "homepage": "https://github.com/otanim/translit-hy2ascii ",
+  "name": "translit-to-ascii",
+  "version": "0.1.0",
+  "description": "Node library for turning strings with armenian/russian characters into ascii compliant text.",
+  "homepage": "https://github.com/otanim/translit-to-ascii",
   "author": "Arman Yeghiazaryan <otanim617@gmail.com> (http://otanim.com)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/otanim/translit-hy2ascii.git"
+    "url": "git+https://github.com/otanim/translit-to-ascii.git"
   },
   "license": "MIT",
   "files": [
@@ -14,33 +14,28 @@
   ],
   "keywords": [
     "translit-hy",
+    "translit-ru",
     "armenian",
+    "russian",
     "transliteration",
     "translit",
     "hy",
     "hay",
     "am",
-    "հայ"
+    "հայ",
+    "ру",
+    "рус",
+    "ru"
   ],
   "dependencies": {},
-  "devDependencies": {
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-nodeunit": "^0.4.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "load-grunt-tasks": "^1.0.0",
-    "time-grunt": "^1.0.0",
-    "grunt-mocha-cli": "^1.11.0",
-    "jshint-stylish": "^1.0.0"
-  },
   "scripts": {
-    "test": "grunt"
+    "test": "mocha"
   },
   "bugs": {
-    "url": "https://github.com/otanim/node-translit-hy/issues"
+    "url": "https://github.com/otanim/translit-to-ascii/issues"
   },
   "main": "index.js",
-  "directories": {
-    "test": "test"
+  "devDependencies": {
+    "mocha": "^8.4.0"
   }
 }
