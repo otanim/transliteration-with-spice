@@ -8,7 +8,7 @@ This is a tool that allows to generate all common used transliterations.
 ## Install
 
 ```sh
-$ npm install translit-to-ascii --save
+$ npm install transliteration-with-spice --save
 ```
 
 
