@@ -1,12 +1,12 @@
 //packages
-const translitserate = require('../');
+const transliterate = require('../');
 const characterMap = require('../characterMap');
 
 //tests
 describe('integrity check', () => {
     it('case mismatch check', function (done) {
         for (let language in characterMap) {
-            const data = characterMap[language];
+            const {map: data} = characterMap[language];
             for (let key in data) {
                 const values = data[key];
                 const isKeyUpperCase = key[0] === key[0].toUpperCase();
@@ -34,7 +34,7 @@ describe('integrity check', () => {
     });
     it('missing letter check', function (done) {
         for (let language in characterMap) {
-            const data = characterMap[language];
+            const {map: data} = characterMap[language];
             for (let key in data) {
                 const isKeyUpperCase = key[0] === key[0].toUpperCase();
                 const keyAlter1 = `${isKeyUpperCase ? key[0].toLowerCase() : key[0].toUpperCase()}${key.substr(1)}`;
@@ -50,45 +50,75 @@ describe('integrity check', () => {
 });
 
 describe('samples', () => {
-    it('hy: բարեւ', function (done) {
-        const textOrigin = 'բարեւ';
-        const textResult = 'barev';
-        const translits = translitserate(textOrigin);
-        if (translits[0] !== textResult) {
-            return done(new Error(`Mismatched result: ${textResult} !== ${translits[0]}`));
-        }
+    describe('to en', () => {
+        it('hy: բարեւ', function (done) {
+            const textOrigin = 'բարեւ';
+            const textResult = 'barev';
+            const translits = transliterate(textOrigin, );
+            console.log(translits);
+            if (!translits.includes(textResult)) {
+                return done(new Error(`Text result for "${textResult}" have not been generated: "${translits.join(', ')}".`));
+            }
 
-        done();
+            done();
+        });
+        it('ru: привет', function (done) {
+            const textOrigin = 'привет';
+            const textResult = 'privet';
+            const translits = transliterate(textOrigin, );
+            console.log(translits);
+            if (!translits.includes(textResult)) {
+                return done(new Error(`Text result for "${textResult}" have not been generated: "${translits.join(', ')}".`));
+            }
+
+            done();
+        });
+
+        it('hy: բարե՛ւ աշխարհ', function (done) {
+            const textOrigin = 'բարե՛ւ աշխարհ';
+            const textResult = 'barev ashkharh';
+            const translits = transliterate(textOrigin, );
+            console.log(translits);
+            if (!translits.includes(textResult)) {
+                return done(new Error(`Text result for "${textResult}" have not been generated: "${translits.join(', ')}".`));
+            }
+
+            done();
+        });
+        it('ru: привет мир!', function (done) {
+            const textOrigin = 'привет мир!';
+            const textResult = 'privet mir!';
+            const translits = transliterate(textOrigin, );
+            console.log(translits);
+            if (!translits.includes(textResult)) {
+                return done(new Error(`Text result for "${textResult}" have not been generated: "${translits.join(', ')}".`));
+            }
+
+            done();
+        });
     });
-    it('ru: привет', function (done) {
-        const textOrigin = 'привет';
-        const textResult = 'privet';
-        const translits = translitserate(textOrigin);
-        if (translits[0] !== textResult) {
-            return done(new Error(`Mismatched result: ${textResult} !== ${translits[0]}`));
-        }
+    describe('to ru', () => {
+        it('hy: բարեւ', function (done) {
+            const textOrigin = 'բարեւ';
+            const textResult = 'барев';
+            const translits = transliterate(textOrigin, 'ru');
+            console.log(translits);
+            if (!translits.includes(textResult)) {
+                return done(new Error(`Text result for "${textResult}" have not been generated: "${translits.join(', ')}".`));
+            }
 
-        done();
-    });
+            done();
+        });
+        it('hy: բարե՛ւ աշխարհ', function (done) {
+            const textOrigin = 'բարե՛ւ աշխարհ';
+            const textResult = 'барев ашхар';
+            const translits = transliterate(textOrigin, 'ru');
+            console.log(translits);
+            if (!translits.includes(textResult)) {
+                return done(new Error(`Text result for "${textResult}" have not been generated: "${translits.join(', ')}".`));
+            }
 
-    it('hy: բարե՛ւ աշխարհ', function (done) {
-        const textOrigin = 'բարե՛ւ աշխարհ';
-        const textResult = 'barev ashkharh';
-        const translits = translitserate(textOrigin);
-        if (translits[0] !== textResult) {
-            return done(new Error(`Mismatched result: ${textResult} !== ${translits[0]}`));
-        }
-
-        done();
-    });
-    it('ru: привет мир!', function (done) {
-        const textOrigin = 'привет мир!';
-        const textResult = 'privet mir!';
-        const translits = translitserate(textOrigin);
-        if (translits[0] !== textResult) {
-            return done(new Error(`Mismatched result: ${textResult} !== ${translits[0]}`));
-        }
-
-        done();
+            done();
+        });
     });
 });

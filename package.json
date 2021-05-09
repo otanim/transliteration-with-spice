@@ -1,12 +1,12 @@
 {
-  "name": "translit-to-ascii",
-  "version": "0.1.5",
+  "name": "transliteration-with-spice",
+  "version": "0.2.0",
   "description": "Node library for turning strings with armenian/russian characters into ascii compliant text.",
-  "homepage": "https://github.com/otanim/translit-to-ascii",
+  "homepage": "https://github.com/otanim/transliteration-with-spice",
   "author": "Arman Yeghiazaryan <otanim617@gmail.com> (http://otanim.com)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/otanim/translit-to-ascii.git"
+    "url": "git+https://github.com/otanim/transliteration-with-spice.git"
   },
   "license": "GPL-3.0",
   "keywords": [
@@ -24,12 +24,14 @@
     "рус",
     "ru"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
   "scripts": {
     "test": "mocha"
   },
   "bugs": {
-    "url": "https://github.com/otanim/translit-to-ascii/issues"
+    "url": "https://github.com/otanim/transliteration-with-spice/issues"
   },
   "main": "index.js",
   "devDependencies": {
