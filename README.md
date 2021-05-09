@@ -15,7 +15,7 @@ $ npm install translit-to-ascii --save
 ## Usage
 
 ```javascript
-const transliterate = require('translit-to-ascii');
+const transliterate = require('transliteration-with-spice');
 
 const translitsHY2EN = transliterate('բարե՛ւ աշխարհ');
 console.log(translits.join(', '));
