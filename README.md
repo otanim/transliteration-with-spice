@@ -6,14 +6,11 @@ This is a tool that allows to generate all common used transliterations.
 - Russian -> ASCII (English, en)
 
 ## Install
-
 ```sh
 $ npm install transliteration-with-spice --save
 ```
 
-
 ## Usage
-
 ```javascript
 const transliterate = require('transliteration-with-spice');
 // The function takes 2 arguments,
