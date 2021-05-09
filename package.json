@@ -1,7 +1,7 @@
 {
   "name": "transliteration-with-spice",
-  "version": "0.2.8",
-  "description": "Node library for turning strings with armenian/russian characters into ascii compliant text.",
+  "version": "0.2.9",
+  "description": "This is a tool that allows to generate all common used transliterations.",
   "homepage": "https://github.com/otanim/transliteration-with-spice",
   "author": "Arman Yeghiazaryan <otanim617@gmail.com> (http://otanim.com)",
   "repository": {
