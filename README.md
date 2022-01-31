@@ -19,14 +19,14 @@ const transliterate = require('transliteration-with-spice');
 // 2nd argument is an optional, the default value is "en".
 
 const translitsHY2EN = transliterate('բարե՛ւ աշխարհ');
-console.log(translits.join(', '));
+console.log(translitsHY2EN.join(', '));
 // barev ashkharh, barev askharh, barev ashxarh, barev asxarh
 
 const translitsHY2RU = transliterate("բարե՛ւ աշխարհ", 'ru');
-console.log(translits.join(', '));
+console.log(translitsHY2RU.join(', '));
 // барев ашхар, барев ашхарх
 
 const translitsRU2EN = transliterate('привет мир!');
-console.log(translits.join(', '));
+console.log(translitsRU2EN.join(', '));
 // privet mir!, privyot mir!, privot mir!
 ```
